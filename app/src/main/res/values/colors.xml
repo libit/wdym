@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#fd001e</color>
+    <color name="colorPrimaryDark">#fd001e</color>
+    <color name="colorAccent">#ff9940</color>
+    <color name="bg_normal">#666666</color>
+    <color name="bg_pressed">#dddddd</color>
+    <color name="black">#ff000000</color>
+    <color name="white">#ffffffff</color>
+    <color name="red">#ffff0000</color>
+    <color name="setting_gray">#ffaaaaaa</color>
+    <color name="setting_white">#fff5f5f5</color>
+    <color name="line">#88c4c4c4</color>
+    <color name="line_height">#88eeebeb</color>
+    <color name="app_list_bg">#ffffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="bg_section_normal">#f9f7f7</color>
+    <color name="bg_section_pressed">#b7b2b2</color>
+    <color name="tab_icon_disabled">#ffffff</color>
+    <color name="accent">#40C4FF</color>
+    <color name="btn_bg">#00c891</color>
+    <color name="tab_text_enabled">#ef5247</color>
+    <color name="tab_text_disabled">#c7a3a3</color>
+    <color name="index_text_line">#c7a3a3</color>
+    <color name="theme_color">#3b9beb</color>
+    <color name="blue">#ffccddff</color>
+    <color name="grey">#58616d</color>
+    <color name="darkgrey">#ff404040</color>
+    <color name="toasterro">#9fd524</color>
+    <color name="lightgrey">#ff888888</color>
+    <color name="semitransparent">#80000000</color>
+    <color name="lightransparent">#a0000000</color>
+    <color name="navpage">#FFE1E8EB</color>
+</resources>

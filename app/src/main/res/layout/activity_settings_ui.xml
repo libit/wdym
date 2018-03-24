@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Libit保留所有版权，如有疑问联系QQ：308062035
+  ~ Copyright (c) 2017.
+  -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/setting_white"
+    android:orientation="vertical"
+    tools:context="cn.lrapps.android.ui.ActivitySettingsUi">
+    <include layout="@layout/layout_title"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/layout_show_notification"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/app_setting_relativeLayout_h"
+                android:layout_marginLeft="@dimen/margin0"
+                android:layout_marginRight="@dimen/margin0"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@color/white"
+                android:contentDescription="@null">
+                <TextView
+                    android:id="@+id/app_setting_show_notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin15"
+                    android:text="@string/pref_title_show_notification"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize18"/>
+                <ImageView
+                    android:id="@id/app_setting_item_tag3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin15"
+                    android:contentDescription="@null"
+                    android:src="@drawable/setting_right_arrow"/>
+                <ImageView
+                    android:id="@+id/app_setting_show_notification_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin10"
+                    android:layout_toLeftOf="@id/app_setting_item_tag3"
+                    android:src="@drawable/btn_checked"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

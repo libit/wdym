@@ -1,0 +1,28 @@
+<!--
+  ~ Libit保留所有版权，如有疑问联系QQ：308062035
+  ~ Copyright (c) 2016.
+  -->
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="app_setting_relativeLayout_h">51.0dp</dimen>
+    <dimen name="margin0">0.0dp</dimen>
+    <dimen name="margin10">10.0dp</dimen>
+    <dimen name="margin15">15.0dp</dimen>
+    <dimen name="margin20">20.0dp</dimen>
+    <dimen name="textsize18">18.0sp</dimen>
+    <dimen name="line_h">1.0dp</dimen>
+    <dimen name="line_w">1.0dp</dimen>
+    <dimen name="tab_text_height">42dp</dimen>
+    <dimen name="tab_main_height">52dp</dimen>
+    <dimen name="LargeTextSize">16dp</dimen>
+    <dimen name="BasicTextSize">15dp</dimen>
+    <dimen name="TitleTextSize">18dp</dimen>
+    <dimen name="SmallTextSize">14dp</dimen>
+    <dimen name="SmallerTextSize">13dp</dimen>
+    <dimen name="LargestTextSize">30dp</dimen>
+    <dimen name="ChattingTextSize">16dp</dimen>
+    <dimen name="ChattingContentMinHeight">49dp</dimen>
+    <dimen name="PreferenceItemHeight">42dp</dimen>
+    <dimen name="ConversationItemHeight">58dp</dimen>
+    <dimen name="LargeAvatarSize">56dp</dimen>
+</resources>

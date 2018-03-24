@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.weiduyx.wdym"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 内存卡写入权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 装载卸载文件系统权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <!-- 关闭后台应用权限 -->
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <!-- 读取日志权限 -->
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <!-- 联网权限 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- 添加桌面图标 -->
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <!-- 删除桌面图标 -->
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT"/>
+    <!-- 窗口至于顶层 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <!-- 开机启动 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <!-- for mta statistics -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- 定位权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <application
+        android:name="cn.lrapps.android.ui.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/MyAppTheme">
+        <!-- 微信 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:theme="@style/MyDialog">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="sdksample"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="net.sourceforge.simcpux.SendToWXActivity"
+            android:label="@string/app_name"
+            android:theme="@style/MMTheme.Basic"/>
+        <activity
+            android:name="net.sourceforge.simcpux.GetFromWXActivity"
+            android:label="@string/app_name"
+            android:theme="@style/MMTheme.Basic"/>
+        <activity
+            android:name="net.sourceforge.simcpux.ShowFromWXActivity"
+            android:label="@string/app_name"
+            android:theme="@style/MMTheme.Basic"/>
+
+        <receiver
+            android:name="net.sourceforge.simcpux.AppRegister"
+            android:permission="com.tencent.mm.plugin.permission.SEND">
+            <intent-filter>
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name="net.sourceforge.simcpux.ScanQRCodeLoginActivity"
+            android:label="@string/scan_qrcode_login"
+            android:theme="@style/MMTheme.Basic"/>
+        <!-- 微信 -->
+        <activity
+            android:name="cn.lrapps.android.ui.ActivitySplash"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityMain"
+            android:exported="true"
+            android:launchMode="singleTask">
+        </activity>
+        <!-- 用作桌面快捷方式启动的Activity -->
+        <activity
+            android:name="cn.lrapps.android.ui.ActivitySettings"
+            android:exported="false"
+            android:label="@string/title_activity_settings">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cn.lrapps.android.ui.ActivityMain"/>
+        </activity>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivitySettingsUi"
+            android:exported="false"
+            android:label="@string/title_activity_settings_ui">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cn.lrapps.android.ui.ActivityMain"/>
+        </activity>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityDialog"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:theme="@style/MyDialog"/>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityAbout"
+            android:exported="false"
+            android:label="@string/title_activity_about"/>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityAdvice"
+            android:exported="false"
+            android:label="@string/title_activity_advice"/>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityChangePwd"
+            android:exported="false"
+            android:label="@string/title_activity_change_pwd"/>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityLogin"
+            android:exported="true"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleTop"/>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityRegister"
+            android:exported="false"
+            android:label="@string/title_activity_register"/>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityUser"
+            android:exported="false"
+            android:label="@string/title_activity_user"/>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityWebView"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:label="@string/title_activity_web_view"/>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityWelcome"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityNewsManage"
+            android:exported="false"
+            android:label="@string/title_activity_news_manage"/>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityNews"
+            android:exported="false"
+            android:label="@string/title_activity_news"/>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityAdviceManage"
+            android:exported="false"
+            android:label="@string/title_activity_advice_manage"/>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityAdviceInfo"
+            android:exported="false"
+            android:label="@string/title_activity_advice_info"/>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityPicPreview"
+            android:exported="false"
+            android:label="@string/title_activity_pic_preview"/>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityUserEdit"
+            android:exported="false"
+            android:label="@string/title_activity_user_edit"/>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityUserWallet"
+            android:exported="false"
+            android:label="@string/title_activity_user_wallet"/>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityUserWithdraw"
+            android:exported="false"
+            android:label="@string/title_activity_user_withdraw"/>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityUserWithdrawLogs"
+            android:exported="false"
+            android:label="@string/title_activity_user_withdraw_logs"/>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityUserPointExchange"
+            android:exported="false"
+            android:label="@string/title_activity_user_point_exchange"/>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityUserPointExchangeLogs"
+            android:exported="false"
+            android:label="@string/title_activity_user_point_exchange_logs"/>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityUserRedpackLogs"
+            android:exported="false"
+            android:label="@string/title_activity_user_redpack_logs"/>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityMaker"
+            android:exported="false"
+            android:label="@string/title_activity_maker"/>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityAgent"
+            android:exported="false"
+            android:label="@string/title_activity_agent"/>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityFansList"
+            android:exported="false"
+            android:label="@string/title_activity_maker_fans_list"/>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityUserFans"
+            android:exported="false"
+            android:label="@string/title_activity_user_fans"/>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityMakerProfits"
+            android:exported="false"
+            android:label="@string/title_activity_maker_profits"/>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityMakerApplyEverQr"
+            android:exported="false"
+            android:label="@string/title_activity_maker_apply_ever_qr"/>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityMakerList"
+            android:exported="false"
+            android:label="@string/title_activity_maker_list"/>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityAgentList"
+            android:exported="false"
+            android:label="@string/title_activity_agent_list"/>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityAgentFansProfits"
+            android:exported="false"
+            android:label="@string/title_activity_agent_fans_profits"/>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityAgentAgentProfits"
+            android:exported="false"
+            android:label="@string/title_activity_agent_agent_profits"/>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityUserAuth"
+            android:exported="false"
+            android:label="@string/title_activity_user_auth"/>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityMakerApply"
+            android:exported="false"
+            android:label="@string/title_activity_maker_apply"/>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityAdWebView"
+            android:exported="false"
+            android:label="@string/title_activity_ad_webview"/>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityZixun"
+            android:exported="false"
+            android:label="@string/title_activity_zixun"/>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityDownloadAdList"
+            android:exported="false"
+            android:label="@string/title_activity_download_ad_list"/>
+        <activity
+            android:name="cn.lrapps.android.ui.ActivityDownloadAdInfo"
+            android:exported="false"
+            android:label="@string/title_activity_download_ad_info"/>
+
+        <provider
+            android:name="cn.lrapps.db.DataBaseProvider"
+            android:authorities="wdym.db"
+            android:enabled="true"
+            android:exported="false">
+        </provider>
+        <!-- 解决7.0以上版本安装包不能直接安装 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.weiduyx.wdym.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+
+        <receiver
+            android:name="cn.lrapps.android.receivers.AppStatusReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="cn.lrapps.android.receivers.SystemBootReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

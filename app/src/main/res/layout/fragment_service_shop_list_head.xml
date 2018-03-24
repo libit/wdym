@@ -1,0 +1,20 @@
+<!--
+  ~ Libit保留所有版权，如有疑问联系QQ：308062035
+  ~ Copyright (c) 2018.
+  -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include
+        android:id="@+id/layout_banner_id"
+        layout="@layout/layout_banner"/>
+    <GridView
+        android:id="@+id/gvAppList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|top"
+        android:background="@color/app_list_bg"
+        android:numColumns="3"/>
+</LinearLayout>

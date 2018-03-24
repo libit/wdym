@@ -1,0 +1,64 @@
+<!--
+  ~ Libit保留所有版权，如有疑问联系QQ：308062035
+  ~ Copyright (c) 2017.
+  -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_section_normal"
+    android:orientation="vertical">
+    <include
+        android:id="@+id/layout_banner_id"
+        layout="@layout/layout_banner"/>
+    <LinearLayout
+        android:id="@+id/v_news"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f97c16"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_news"/>
+        <cn.lrapps.android.ui.customer.MarqueeTextView
+            android:id="@+id/tv_news"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ellipsize="marquee"
+            android:gravity="center_vertical"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+    </LinearLayout>
+    <GridView
+        android:id="@+id/gvAppList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|top"
+        android:background="@color/app_list_bg"
+        android:numColumns="3"/>
+    <ListView
+        android:id="@+id/lvArticle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/app_list_bg"
+        android:divider="#00000000"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:scrollbars="none"/>
+</LinearLayout>

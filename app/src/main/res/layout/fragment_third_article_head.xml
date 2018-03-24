@@ -1,0 +1,38 @@
+<!--
+  ~ Libit保留所有版权，如有疑问联系QQ：308062035
+  ~ Copyright (c) 2018.
+  -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_section_normal"
+    android:orientation="vertical">
+    <include
+        android:id="@+id/layout_banner_id"
+        layout="@layout/layout_banner"/>
+    <GridView
+        android:id="@+id/gvAppList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|top"
+        android:background="@color/app_list_bg"
+        android:numColumns="3"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+        <ListView
+            android:id="@+id/lvArticle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/bg_section_normal"
+            android:dividerHeight="8dp"
+            android:fadingEdge="none"
+            android:fastScrollEnabled="false"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:scrollbars="none"/>
+    </LinearLayout>
+</LinearLayout>

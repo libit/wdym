@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Libit保留所有版权，如有疑问联系QQ：308062035
+  ~ Copyright (c) 2018.
+  -->
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_log"
+        android:icon="@drawable/icon_log"
+        android:orderInCategory="100"
+        android:title="提现记录"
+        app:showAsAction="always"/>
+</menu>

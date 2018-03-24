@@ -1,0 +1,255 @@
+<resources>
+    <string name="app_name">手盟</string>
+    <string name="action_settings">应用设置</string>
+    <string name="action_exit">退出应用</string>
+    <string name="action_share">分享给好友</string>
+    <string name="action_refresh">刷新</string>
+    <string name="action_help">使用帮助</string>
+    <string name="action_about">关于我们</string>
+    <string name="action_advice">意见反馈</string>
+    <string name="action_bug_level">日志记录</string>
+    <string name="action_update">检查更新</string>
+    <string name="action_back">后退</string>
+    <string name="action_close">关闭</string>
+    <string name="action_forward">前进</string>
+    <string name="action_home">首页</string>
+    <string name="action_open_in_browser">用浏览器打开</string>
+    <string name="title_warning">提示</string>
+    <string name="cancel">取消</string>
+    <string name="ok">确定</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="update_now">立即升级</string>
+    <string name="update_later">暂不升级</string>
+    <string name="downloading">正在下载</string>
+    <string name="update_title">版本升级</string>
+    <string name="drawer_open">打开</string>
+    <string name="drawer_close">关闭</string>
+    <string name="pref_title_show_notification">显示通知栏</string>
+    <string name="pref_title_boot_start">开机运行</string>
+    <string name="action_welcome">功能介绍</string>
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载&#8230;</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <string name="xlistview_header_hint_success">刷新成功</string>
+    <string name="not_updated_yet">暂未更新过</string>
+    <string name="updated_at">上次更新于%1$s前</string>
+    <string name="updated_just_now">刚刚更新</string>
+    <string name="time_error">时间有问题</string>
+    <string name="dialog_title_bug_level">日志记录级别</string>
+    <string name="auto_update_log">自动上报错误日志</string>
+    <string name="log_tips">提示：日志级别越高记录的信息越详细，可以让开发者更全面的定位错误，但记录的越详细相应的日志文件则越大，建议选择级别3</string>
+    <string name="about_content">版本号</string>
+    <string name="title_activity_about">关于我们</string>
+    <string name="title_activity_change_pwd">修改密码</string>
+    <string name="title_activity_web_view">浏览器</string>
+    <string name="title_activity_advice">意见反馈</string>
+    <string name="title_activity_login">用户登录</string>
+    <string name="title_activity_register">用户注册</string>
+    <string name="title_activity_user">用户中心</string>
+    <string name="title_activity_settings">设置</string>
+    <string name="title_activity_settings_ui">界面设置</string>
+    <string name="title_activity_news_manage">消息列表</string>
+    <string name="title_activity_news">消息详情</string>
+    <string name="title_activity_advice_manage">意见反馈列表</string>
+    <string name="title_activity_advice_info">意见反馈详情</string>
+    <string name="title_activity_pic_preview">图片预览</string>
+    <string name="title_activity_user_edit">修改用户资料</string>
+    <string name="title_activity_user_wallet">我的钱包</string>
+    <string name="title_activity_user_withdraw">收入提现</string>
+    <string name="title_activity_user_withdraw_logs">提现记录</string>
+    <string name="title_activity_user_point_exchange">金币兑换</string>
+    <string name="title_activity_user_point_exchange_logs">金币兑换记录</string>
+    <string name="title_activity_user_redpack_logs">红包记录</string>
+    <string name="title_activity_maker">创客服务</string>
+    <string name="title_activity_agent">合伙人服务</string>
+    <string name="title_activity_maker_fans_list">我的粉丝</string>
+    <string name="title_activity_user_fans">用户信息</string>
+    <string name="title_activity_maker_profits">创客收益</string>
+    <string name="title_activity_maker_apply_ever_qr">创客申请永久二维码</string>
+    <string name="title_activity_maker_list">我的创客</string>
+    <string name="title_activity_agent_list">我的合伙人</string>
+    <string name="title_activity_agent_fans_profits">粉丝红包收益</string>
+    <string name="title_activity_agent_agent_profits">推荐合伙人红包收益</string>
+    <string name="title_activity_user_auth">实名认证</string>
+    <string name="title_activity_maker_apply">申请创客</string>
+    <string name="title_activity_zixun">资讯</string>
+    <string name="title_activity_download_ad_list">下载红包列表</string>
+    <string name="title_activity_download_ad_info">下载红包详情</string>
+    <string name="title_activity_ad_webview"></string>
+    <string name="func_change_pwd">修改密码</string>
+    <string name="func_logout">退出登录</string>
+    <string name="func_advice">意见反馈</string>
+    <string name="func_redpack_log_list">红包记录</string>
+    <string name="func_wallet">我的钱包</string>
+    <string name="func_maker_apply">申请创客</string>
+    <string name="func_maker">创客服务</string>
+    <string name="func_help">操作指南</string>
+    <string name="func_agent">合伙人服务</string>
+    <string name="func_user_edit">修改资料</string>
+    <string name="func_user_data">用户资料</string>
+    <string name="func_edit">修改</string>
+    <string name="func_delete">删除</string>
+    <string name="func_preview">预览</string>
+    <string name="func_article_msg_list">留言</string>
+    <string name="func_save_pic">保存到相册</string>
+    <string name="func_index">首页</string>
+    <string name="func_fuli">福利</string>
+    <string name="func_shop">商城</string>
+    <string name="func_msg">消息</string>
+    <string name="func_msg_list">我的消息</string>
+    <string name="func_juan">返券</string>
+    <string name="func_movie">电影</string>
+    <string name="func_article">资讯</string>
+    <string name="func_user">我的</string>
+    <string name="func_account">我的账户</string>
+    <string name="func_brand_rule">抽奖规则</string>
+    <string name="func_view_wallet">查看我的奖品</string>
+    <string name="btn_wx_login">微信登录</string>
+    <string name="btn_qq_login">QQ登录</string>
+    <string name="text_company">上海侃耶信息科技有限公司版权所有</string>
+    <string name="func_maker_fans">我的粉丝</string>
+    <string name="func_maker_share">好友分享</string>
+    <string name="func_maker_profit">创客收益</string>
+    <string name="func_maker_ever_qr">申请永久二维码</string>
+    <string name="func_agent_share">合伙人专属码</string>
+    <string name="func_agent_fans">我的粉丝</string>
+    <string name="func_agent_makers">我的创客</string>
+    <string name="func_agent_agents">我的合伙人</string>
+    <string name="func_agent_fans_profit">推荐粉丝收益</string>
+    <string name="func_agent_agent_profit">推荐合伙人收益</string>
+    <string name="brand_redpack_rule">1．每个用户每天最少有3次以上的领取红包机会，平台方保证用户每次能100%领取现金红包，看到红包后需等待品牌商页面打开后滚动至页面最下方点击领取，所领取的红包会自动到用户微度友盟个人钱包账户，每个手机号仅对应一个微信号。\n
+
+					2．不同红包发放时长尽不相同，如点击红包可立刻发放，朋友圈分享红包会在用户24小时没取消分享的条件下准时发放，公众号关注红包会在用户一周没取消关注的条件下准时发放，应用下载红包需用户在手机验证并完成注册一周没卸载的条件下准时发放。\n
+
+					3．用户每次领取红包大小是根据品牌商在微度友盟平台所投放广告形式及成本而定，金额从几分至几十元不等的现金红包。\n
+
+					4．参与领取红包用户必须先关注微度友盟公众号成功才可享有领取权限，（新微信号不满3个月，被举报并被腾讯列为黑名单微信用户，未实名绑卡用户）所领到红包会被腾讯限制导致无法提现。\n
+
+					（本活动最终解释权在法律规定范围内归上海侃耶信息科技有限公司所有）</string>
+    <!-- 微信 -->
+    <string name="app_back">返回</string>
+    <string name="app_ok">确定</string>
+    <string name="app_cancel">取消</string>
+    <string name="app_continue">继续</string>
+    <string name="app_tip">提示</string>
+    <string name="app_send">发送</string>
+    <string name="app_set">设置</string>
+    <string name="app_save">保存</string>
+    <string name="app_delete">删除</string>
+    <string name="app_nextstep">下一步</string>
+    <string name="app_prevstep">上一步</string>
+    <string name="app_finish">完成</string>
+    <string name="app_find">查找</string>
+    <string name="app_edit">编辑</string>
+    <!-- applet -->
+    <string name="applet_secimg_title">填写验证码</string>
+    <string name="applet_secimg_change">换一张图片</string>
+    <string name="applet_seccode_tip">验证码不能为空</string>
+    <string name="applet_seccode_fail_tip">验证码错误，请重新输入</string>
+    <!-- verify -->
+    <string name="verify_password_null_tip">密码不能为空，请输入密码</string>
+    <!-- format -->
+    <string name="fmt_date">M月d日</string>
+    <string name="fmt_longdate">yyyy年M月d日</string>
+    <string name="fmt_datetime" formatted="false">M月d日 %skk:mm</string>
+    <string name="fmt_patime">kk:mm</string>
+    <string name="fmt_longtime" formatted="false">yyyy年M月d日 %skk:mm</string>
+    <string name="fmt_in60min" formatted="false">%d分钟前</string>
+    <string name="fmt_justnow">1分钟内</string>
+    <string name="fmt_dawn">凌晨</string>
+    <string name="fmt_morning">早上</string>
+    <string name="fmt_noon">中午</string>
+    <string name="fmt_afternoon">下午</string>
+    <string name="fmt_evening">晚上</string>
+    <string name="fmt_pre_yesterday">昨天</string>
+    <string name="fmt_iap_err" formatted="false">网络连接不可用，请稍候重试</string>
+    <string name="hello">Hello World, SDKSampleActivity!</string>
+    <string name="app_share">分享</string>
+    <string name="enter">这是SDK_Sample的入口界面</string>
+    <string name="reg">将该app注册到微信</string>
+    <string name="goto_send">跳转到发消息界面</string>
+    <string name="launch_wx">启动微信</string>
+    <string name="check_timeline_supported">检查是否支持发送到朋友圈</string>
+    <string name="send_to_wx_title">发送到微信</string>
+    <string name="get_from_wx_title">从微信接收</string>
+    <string name="show_from_wx_title">显示微信请求的消息</string>
+    <string name="errcode_success">发送成功</string>
+    <string name="errcode_cancel">发送取消</string>
+    <string name="errcode_deny">发送被拒绝</string>
+    <string name="errcode_unsupported">不支持错误</string>
+    <string name="errcode_unknown">发送返回</string>
+    <!-- WXMediaMessage -->
+    <string name="send">发送到微信</string>
+    <string name="receive">从微信接收</string>
+    <string name="is_timeline">是否分享到朋友圈</string>
+    <string name="send_text">发送文本</string>
+    <string name="send_text_default">这段文字发送自微信SDK示例程序</string>
+    <string name="send_img">发送图片</string>
+    <string-array name="send_img_item">
+        <item>发送图片的二进制数据</item>
+        <item>发送图片的本地路径</item>
+        <!-- <item>发送图片的URL</item> -->
+    </string-array>
+    <string name="send_img_file_not_exist">文件不存在</string>
+    <string name="send_pic">发送照片</string>
+    <string name="send_music">发送音乐</string>
+    <string-array name="send_music_item">
+        <item>发送音乐url</item>
+        <item>发送低带宽音乐url</item>
+    </string-array>
+    <string name="send_video">发送视频</string>
+    <string-array name="send_video_item">
+        <item>发送视频url</item>
+        <item>发送低带宽视频url</item>
+    </string-array>
+    <string name="send_webpage">发送网页</string>
+    <string-array name="send_webpage_item">
+        <item>发送网页url</item>
+    </string-array>
+    <string name="send_appdata">发送app消息</string>
+    <string-array name="send_appdata_item">
+        <item>发送app文件本地路径</item>
+        <item>发送app二进制数据</item>
+        <item>发送无附件的app</item>
+    </string-array>
+    <string name="send_emoji">发送表情消息</string>
+    <string-array name="send_emoji_item">
+        <item>发送表情本地路径</item>
+        <item>发送表情二进制数据</item>
+    </string-array>
+    <string-array name="send_emoji_item_format">
+        <item>发送GIF图片</item>
+        <item>发送非GIF图片</item>
+    </string-array>
+    <string name="share_text_to_weixin">回应文本到微信</string>
+    <string name="share_text_default">这段文字回应自微信SDK示例程序</string>
+    <string name="share_url_to_weixin">回应URL到微信</string>
+    <string name="share_pic_to_weixin">回应图片到微信</string>
+    <string name="share_music_to_weixin">回应音乐到微信</string>
+    <string name="share_video_to_weixin">回应视频到微信</string>
+    <string name="share_appdata_to_weixin">回应app消息到微信</string>
+    <string name="register_as_weixin_app_sender">注册微信事件发送器</string>
+    <string name="get_token_from_weixin">获取微信访问Token</string>
+    <string name="unregister_from_weixin">从微信反注册</string>
+    <string name="show_from_wx_tip">这个界面用于显示微信向第三方app请求显示的信息</string>
+    <string name="scan_qrcode_login">扫码登录</string>
+    <string name="auth">微信登录</string>
+    <string name="cancel_auth">取消登录</string>
+    <string name="qrcode_wait_for_scan">扫描二维码登录</string>
+    <string name="qrcode_scanned">点击确认登录</string>
+    <string name="result_succ" formatted="false">登录成功，code=%s</string>
+    <string name="result_normal_err">登录失败，一般错误</string>
+    <string name="result_network_err">登录失败，网络错误</string>
+    <string name="result_json_decode_err">json解码失败</string>
+    <string name="result_user_cancel">用户取消</string>
+    <string name="result_timeout_err">登录失败，超时错误</string>
+    <string name="target_scene">目标场景</string>
+    <string name="target_scene_session">会话</string>
+    <string name="target_scene_timeline">朋友圈</string>
+    <string name="target_scene_favorite">收藏</string>
+    <!-- 微信 -->
+</resources>
