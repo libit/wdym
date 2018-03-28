@@ -39,6 +39,7 @@ import cn.lrapps.models.TabInfo;
 import cn.lrapps.utils.ConstValues;
 import cn.lrapps.utils.GsonTools;
 import cn.lrapps.utils.StringTools;
+import cn.lrapps.utils.viewtools.DisplayTools;
 
 public class ActivityZixun extends MyBaseActivity
 {
@@ -61,6 +62,8 @@ public class ActivityZixun extends MyBaseActivity
 	{
 		super.viewInit();
 		setBackButton();
+		//设置滑动返回区域
+		getSwipeBackLayout().setEdgeSize(DisplayTools.getWindowWidth(this) / 20);
 		initData();
 	}
 

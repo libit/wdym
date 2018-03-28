@@ -43,4 +43,10 @@ public class DisableScrollViewPager extends ViewPager
 	{
 		return isCanScroll && super.onTouchEvent(ev);
 	}
+
+	@Override
+	public void setCurrentItem(int item)
+	{
+		super.setCurrentItem(item, false);//禁止滚动的效果
+	}
 }

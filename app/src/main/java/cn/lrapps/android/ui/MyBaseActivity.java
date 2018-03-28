@@ -12,10 +12,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.WindowManager;
 
-import cn.lrapps.utils.LogTools;
-import cn.lrapps.utils.viewtools.DisplayTools;
 import com.weiduyx.wdym.R;
 
+import cn.lrapps.utils.LogTools;
+import cn.lrapps.utils.viewtools.DisplayTools;
 import me.imid.swipebacklayout.lib.app.SwipeBackActivity;
 
 /**
@@ -57,7 +57,7 @@ public class MyBaseActivity extends SwipeBackActivity
 			LogTools.error("viewInit", "获取ActionBar失败！");
 		}
 		//设置滑动返回区域
-		getSwipeBackLayout().setEdgeSize(DisplayTools.getWindowWidth(this) / 4);
+		getSwipeBackLayout().setEdgeSize(DisplayTools.getWindowWidth(this) / 6);
 	}
 
 	/**
