@@ -91,7 +91,7 @@ public class ActivityWebView extends MyBaseActivity
 	{
 		super.viewInit();
 		setBackButton();
-		getSwipeBackLayout().setEdgeSize(DisplayTools.getWindowWidth(this) / 15);//设置滑动返回区域
+		getSwipeBackLayout().setEdgeSize(DisplayTools.getWindowWidth(this) / 20);//设置滑动返回区域
 		progressBar = (ProgressBar) findViewById(R.id.progress_bar);
 		mWebView = (X5WebView) findViewById(R.id.webview);
 		mWebView.setWebChromeClient(new WebChromeClient()

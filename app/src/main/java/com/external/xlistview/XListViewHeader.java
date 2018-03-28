@@ -117,13 +117,15 @@ public class XListViewHeader extends LinearLayout
 		if (state == mState)
 			return;
 		if (state == STATE_REFRESHING)
-		{    // 显示进度
+		{
+			// 显示进度
 			mArrowImageView.clearAnimation();
 			mArrowImageView.setVisibility(View.INVISIBLE);
 			mProgressBar.setVisibility(View.VISIBLE);
 		}
 		else
-		{    // 显示箭头图片
+		{
+			// 显示箭头图片
 			mArrowImageView.setVisibility(View.VISIBLE);
 			mProgressBar.setVisibility(View.INVISIBLE);
 		}

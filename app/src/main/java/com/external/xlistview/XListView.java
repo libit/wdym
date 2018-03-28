@@ -21,6 +21,8 @@ import android.widget.TextView;
 
 import com.weiduyx.wdym.R;
 
+import cn.lrapps.utils.LogTools;
+
 public class XListView extends ListView implements OnScrollListener
 {
 	private final static int SCROLLBACK_HEADER = 0;
@@ -80,8 +82,7 @@ public class XListView extends ListView implements OnScrollListener
 	private void initWithContext(Context context)
 	{
 		mScroller = new Scroller(context, new DecelerateInterpolator());
-		// XListView need the scroll event, and it will dispatch the event to
-		// user's listener (as a proxy).
+		// XListView need the scroll event, and it will dispatch the event to user's listener (as a proxy).
 		super.setOnScrollListener(this);
 		// init header view
 		mHeaderView = new XListViewHeader(context);
@@ -237,7 +238,8 @@ public class XListView extends ListView implements OnScrollListener
 	{
 		mHeaderView.setVisiableHeight((int) delta + mHeaderView.getVisiableHeight());
 		if (mEnablePullRefresh && !mPullRefreshing)
-		{ // 未处于刷新状态，更新箭头
+		{
+			// 未处于刷新状态，更新箭头
 			if (mHeaderView.getVisiableHeight() > mHeaderViewHeight)
 			{
 				mHeaderView.setState(XListViewHeader.STATE_READY);
@@ -256,23 +258,20 @@ public class XListView extends ListView implements OnScrollListener
 	private void resetHeaderHeight()
 	{
 		int height = mHeaderView.getVisiableHeight();
-		//        LogUtils.i("mHeaderView:"+height+"==mPullRefreshing:"+mPullRefreshing+"==mHeaderViewHeight:"+mHeaderViewHeight);
+		LogTools.info("resetHeaderHeight", "mHeaderView:" + height + "==mPullRefreshing:" + mPullRefreshing + "==mHeaderViewHeight:" + mHeaderViewHeight);
 		if (height == 0) // not visible.
 			return;
-		// refreshing and header isn't shown fully. do nothing.
-		if (mPullRefreshing && height <= mHeaderViewHeight)
-		{
-			return;
-		}
-		int finalHeight = 0; // default: scroll back to dismiss header.
-		// is refreshing, just scroll back to show all the header.
 		if (mPullRefreshing && height > mHeaderViewHeight)
 		{
-			finalHeight = mHeaderViewHeight;
+			// refreshing and header isn't shown fully. do nothing.
+			mScrollBack = SCROLLBACK_HEADER;
+			mScroller.startScroll(0, height, 0, mHeaderViewHeight - height, SCROLL_DURATION);
+			// trigger computeScroll
+			invalidate();
+			return;
 		}
 		mScrollBack = SCROLLBACK_HEADER;
-		mScroller.startScroll(0, height, 0, finalHeight - height, SCROLL_DURATION);
-		// trigger computeScroll
+		mScroller.startScroll(0, height, 0, -height, SCROLL_DURATION);
 		invalidate();
 	}
 
@@ -377,7 +376,7 @@ public class XListView extends ListView implements OnScrollListener
 					}
 				}
 				//                if (mHeaderView.getVisiableHeight() > 0) {
-				//                    LogUtils.i("mHeaderView,Up:"+mHeaderView.getVisiableHeight());
+				LogTools.info("onTouchEvent", "mHeaderView,Up:" + mHeaderView.getVisiableHeight());
 				//                }
 				resetFooterHeight();
 				resetHeaderHeight();

@@ -104,7 +104,7 @@ public class ActivityAdWebView extends MyBaseActivity implements IAjaxDataRespon
 	{
 		super.viewInit();
 		setBackButton();
-		getSwipeBackLayout().setEdgeSize(DisplayTools.getWindowWidth(this) / 15);//设置滑动返回区域
+		getSwipeBackLayout().setEdgeSize(DisplayTools.getWindowWidth(this) / 20);//设置滑动返回区域
 		progressBar = (ProgressBar) findViewById(R.id.progress_bar);
 		mWebView = (X5WebView) findViewById(R.id.webview);
 		mTvDefault = (CircleTextProgressbar) findViewById(R.id.tv_ad_tm_down);

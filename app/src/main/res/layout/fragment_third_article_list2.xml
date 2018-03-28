@@ -35,7 +35,6 @@
         android:id="@+id/xlist"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="-2dp"
         android:background="@color/app_list_bg"
         android:divider="@color/bg_section_normal"
         android:dividerHeight="8dp"

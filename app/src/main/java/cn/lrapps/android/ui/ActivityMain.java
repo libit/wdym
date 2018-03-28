@@ -47,6 +47,7 @@ import org.greenrobot.eventbus.Subscribe;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.lrapps.android.ui.customer.DisableScrollViewPager;
 import cn.lrapps.android.ui.customer.LayoutSideMain;
 import cn.lrapps.android.ui.customer.MyActionBarDrawerToggle;
 import cn.lrapps.android.ui.customer.ToastView;
@@ -72,7 +73,7 @@ public class ActivityMain extends MyBaseActivity implements MyActionBarDrawerTog
 	protected int pageIndex = 0;
 	//视图控件
 	private View vHead;
-	protected ViewPager mViewPager;
+	protected DisableScrollViewPager mViewPager;
 	private XListView xListView;
 	private LayoutSideMain layoutSideMain;
 	private DrawerLayout mDrawerLayout;
@@ -221,7 +222,7 @@ public class ActivityMain extends MyBaseActivity implements MyActionBarDrawerTog
 		//加载tab布局
 		ViewGroup tab = (ViewGroup) findViewById(R.id.tab);
 		tab.addView(LayoutInflater.from(this).inflate(R.layout.layout_tab_icon_and_notification_mark, tab, false));
-		mViewPager = (ViewPager) findViewById(R.id.pager);
+		mViewPager = (DisableScrollViewPager) findViewById(R.id.pager);
 		final SmartTabLayout viewPagerTab = (SmartTabLayout) findViewById(R.id.viewpagertab);
 		viewPagerTab.setCustomTabView(new SmartTabLayout.TabProvider()
 		{
@@ -363,16 +364,6 @@ public class ActivityMain extends MyBaseActivity implements MyActionBarDrawerTog
 	{
 		finish();
 		System.exit(0);
-	}
-
-	/**
-	 * 当前显示的页面索引
-	 *
-	 * @return
-	 */
-	public int getPageIndex()
-	{
-		return pageIndex;
 	}
 
 	@Subscribe

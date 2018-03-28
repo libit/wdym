@@ -11,7 +11,6 @@
         android:id="@+id/xlist"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="-2dp"
         android:layout_weight="1"
         android:background="@color/app_list_bg"
         android:divider="#00000000"
