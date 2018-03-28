@@ -167,7 +167,10 @@ public class FragmentIndex extends MyBaseBannerPageFragment implements IAjaxData
 
 	private void initData()
 	{
-		mFuncInfoList = new ArrayList<>();
+		if (mFuncInfoList == null)
+		{
+			mFuncInfoList = new ArrayList<>();
+		}
 		ClientBannerService clientBannerService = new ClientBannerService(this.getContext());
 		clientBannerService.addDataResponse(new IAjaxDataResponse()
 		{
@@ -223,7 +226,6 @@ public class FragmentIndex extends MyBaseBannerPageFragment implements IAjaxData
 													{
 														if (content.equals("zixun"))
 														{
-															//															ActivityMain.getInstance().setCurrentItem(ActivityMain.ARTICLE);
 															FragmentIndex.this.getContext().startActivity(new Intent(FragmentIndex.this.getContext(), ActivityZixun.class));
 														}
 														else if (content.equals("movie"))

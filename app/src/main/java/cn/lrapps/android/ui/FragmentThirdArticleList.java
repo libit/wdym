@@ -51,7 +51,7 @@ import cn.lrapps.utils.viewtools.ViewHeightCalTools;
 public class FragmentThirdArticleList extends MyBaseBannerPageFragment implements IAjaxDataResponse, View.OnClickListener
 {
 	private static final String TAG = FragmentThirdArticleList.class.getSimpleName();
-	public static final int COL_SIZE = 6;
+	public static int COL_SIZE = 4;
 	private View headView, vBanner;
 	private TextView tvTitle;
 	private ImageView ivRight;
@@ -119,18 +119,6 @@ public class FragmentThirdArticleList extends MyBaseBannerPageFragment implement
 		super.onDetach();
 		this.mActivity = null;
 	}
-	//	@Override
-	//	public void onStart()
-	//	{
-	//		super.onStart();
-	//		onRefresh();
-	//	}
-	//	@Override
-	//	public void onResume()
-	//	{
-	//		super.onResume();
-	//		onRefresh();
-	//	}
 
 	@Override
 	protected void viewInit(View rootView)
@@ -154,7 +142,6 @@ public class FragmentThirdArticleList extends MyBaseBannerPageFragment implement
 		setBannerWidthAndHeight(DisplayTools.getWindowWidth(this.getContext()), DisplayTools.getWindowWidth(this.getContext()) / 2);
 		initBannerView();
 		gvAppList = (GridView) rootView.findViewById(R.id.gvAppList);
-		gvAppList.setNumColumns(COL_SIZE);
 		lvArticle = (ListView) rootView.findViewById(R.id.lvArticle);
 		super.viewInit(rootView);
 	}
@@ -231,6 +218,15 @@ public class FragmentThirdArticleList extends MyBaseBannerPageFragment implement
 							{
 								mGridFuncAdapter.notifyDataSetChanged();
 							}
+							if (mFuncInfoList.size() > 4)
+							{
+								COL_SIZE = mFuncInfoList.size() / 2 + (mFuncInfoList.size() % 2 == 1 ? 1 : 0);
+							}
+							else
+							{
+								COL_SIZE = mFuncInfoList.size();
+							}
+							gvAppList.setNumColumns(COL_SIZE);
 							ViewHeightCalTools.setGridViewHeight(gvAppList, COL_SIZE, true);
 						}
 					}

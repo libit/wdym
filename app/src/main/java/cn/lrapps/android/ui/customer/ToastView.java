@@ -26,13 +26,13 @@ public class ToastView
 	private int time;
 	private Timer timer;
 	private View view;
-	private TextView t;
+	private TextView tvContent;
 	private ImageView ivIcon;
 
 	public ToastView(Context context, String text)
 	{
 		viewInit(context);
-		t.setText(text);
+		tvContent.setText(text);
 		if (toast != null)
 		{
 			toast.cancel();
@@ -45,7 +45,7 @@ public class ToastView
 	public ToastView(Context context, int text)
 	{
 		viewInit(context);
-		t.setText(text);
+		tvContent.setText(text);
 		if (toast != null)
 		{
 			toast.cancel();
@@ -59,7 +59,7 @@ public class ToastView
 	{
 		viewInit(context);
 		ivIcon.setImageResource(imgRes);
-		t.setText(text);
+		tvContent.setText(text);
 		if (toast != null)
 		{
 			toast.cancel();
@@ -73,7 +73,7 @@ public class ToastView
 	{
 		viewInit(context);
 		ivIcon.setImageResource(imgRes);
-		t.setText(text);
+		tvContent.setText(text);
 		if (toast != null)
 		{
 			toast.cancel();
@@ -85,13 +85,13 @@ public class ToastView
 
 	private void viewInit(Context context)
 	{
-		view = LayoutInflater.from(context).inflate(R.layout.toast_view, null);
+		view = LayoutInflater.from(context).inflate(R.layout.layout_toast, null);
 		View layoutBg = view.findViewById(R.id.layout_bg);
 		ViewGroup.LayoutParams layoutParams = layoutBg.getLayoutParams();
-		layoutParams.width = DisplayTools.getWindowWidth(context) * 2 / 5;
-		layoutParams.height = layoutParams.width;
+		layoutParams.width = DisplayTools.getWindowWidth(context) * 2 / 4;
+		//		layoutParams.height = layoutParams.width;
 		view.setLayoutParams(layoutParams);
-		t = (TextView) view.findViewById(R.id.toast_text);
+		tvContent = (TextView) view.findViewById(R.id.toast_text);
 		ivIcon = (ImageView) view.findViewById(R.id.iv_icon);
 	}
 
@@ -107,14 +107,16 @@ public class ToastView
 	{
 		ToastView toast = new ToastView(context, tips);
 		toast.setGravity(Gravity.CENTER, 0, 0);
-		toast.show();
+		toast.setLongTime(1000);
+//		toast.show();
 	}
 
 	public static void showCenterToast(Context context, int imgRes, String tips)
 	{
 		ToastView toast = new ToastView(context, imgRes, tips);
 		toast.setGravity(Gravity.CENTER, 0, 0);
-		toast.show();
+		toast.setLongTime(1000);
+//		toast.show();
 	}
 
 	//设置toast显示位置

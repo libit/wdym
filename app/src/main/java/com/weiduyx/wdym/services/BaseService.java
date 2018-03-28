@@ -10,7 +10,7 @@ import android.content.Context;
 import com.androidquery.AQuery;
 import com.androidquery.callback.AjaxStatus;
 import cn.lrapps.android.ui.customer.ToastView;
-import cn.lrapps.android.ui.dialog.MyProgressDialog;
+import cn.lrapps.android.ui.dialog.DialogLoading;
 import cn.lrapps.utils.AppConfig;
 import cn.lrapps.utils.CryptoTools;
 import cn.lrapps.utils.GsonTools;
@@ -126,7 +126,7 @@ public abstract class BaseService
 		cb.url(url).type(String.class).params(params);
 		if (showProgressDialog && !StringTools.isNull(tips))
 		{
-			MyProgressDialog pd = new MyProgressDialog(context, tips);
+			DialogLoading pd = new DialogLoading(context, tips);
 			aQuery.progress(pd.mDialog).ajax(cb);
 		}
 		else

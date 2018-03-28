@@ -18,18 +18,12 @@ import android.widget.TextView;
 
 import com.androidquery.callback.AjaxStatus;
 import com.external.xlistview.XListView;
-import cn.lrapps.enums.MoneyUnit;
-import cn.lrapps.enums.UserBalanceLogType;
-import cn.lrapps.enums.UserEvent;
-import cn.lrapps.models.TabInfo;
-import cn.lrapps.utils.GsonTools;
-import cn.lrapps.utils.LogTools;
-import cn.lrapps.utils.StringTools;
 import com.ogaclejapan.smarttablayout.SmartTabLayout;
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItem;
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter;
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems;
 import com.squareup.picasso.Picasso;
+import com.weiduyx.wdym.R;
 import com.weiduyx.wdym.models.UserInfo;
 import com.weiduyx.wdym.services.ApiConfig;
 import com.weiduyx.wdym.services.IAjaxDataResponse;
@@ -37,13 +31,19 @@ import com.weiduyx.wdym.services.UserBalanceLogInfoService;
 import com.weiduyx.wdym.services.UserPointExchangeService;
 import com.weiduyx.wdym.services.UserService;
 import com.weiduyx.wdym.services.UserWithdrawService;
-import com.weiduyx.wdym.R;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import cn.lrapps.enums.MoneyUnit;
+import cn.lrapps.enums.UserBalanceLogType;
+import cn.lrapps.enums.UserEvent;
+import cn.lrapps.models.TabInfo;
+import cn.lrapps.utils.GsonTools;
+import cn.lrapps.utils.StringTools;
 
 public class ActivityUserWallet extends MyBaseActivity implements View.OnClickListener, XListView.IXListViewListener, IAjaxDataResponse
 {
@@ -329,7 +329,6 @@ public class ActivityUserWallet extends MyBaseActivity implements View.OnClickLi
 	@Override
 	public void onLoadMore()
 	{
-		LogTools.debug(TAG, "onLoadMore:加载更多");
 		new Handler().postDelayed(new Runnable()
 		{
 			@Override

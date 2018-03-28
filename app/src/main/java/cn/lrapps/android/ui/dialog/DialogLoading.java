@@ -16,15 +16,15 @@ import android.widget.TextView;
 import cn.lrapps.utils.viewtools.DisplayTools;
 import com.weiduyx.wdym.R;
 
-public class MyProgressDialog
+public class DialogLoading
 {
 	public final Dialog mDialog;
 	private AnimationDrawable animationDrawable = null;
 
-	public MyProgressDialog(Context context, String message)
+	public DialogLoading(Context context, String message)
 	{
 		LayoutInflater inflater = LayoutInflater.from(context);
-		View view = inflater.inflate(R.layout.progress_view, null);
+		View view = inflater.inflate(R.layout.layout_loading, null);
 		View layoutBg = view.findViewById(R.id.layout_bg);
 		ViewGroup.LayoutParams layoutParams = layoutBg.getLayoutParams();
 		layoutParams.width = DisplayTools.getWindowWidth(context) * 2 / 5;
